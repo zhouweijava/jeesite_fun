@@ -6,6 +6,7 @@ package com.thinkgem.jeesite.modules.hosp.entity;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import com.thinkgem.jeesite.common.utils.excel.annotation.ExcelField;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -22,7 +23,6 @@ import com.thinkgem.jeesite.common.persistence.IdEntity;
 public class PatientDetail extends IdEntity<PatientDetail> {
 	
 	private static final long serialVersionUID = 1L;
-	private String id; 		// 编号
 	private String patient_name; 	// 名称
 	private String symptom;
 	private String total_cost;
@@ -57,7 +57,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 		this();
 		this.id = id;
 	}
-
+	@ExcelField(title="姓名", align=2, sort=20)
 	public String getPatient_name() {
 		return patient_name;
 	}
@@ -66,6 +66,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 		this.patient_name = patient_name;
 	}
 
+	@ExcelField(title="总费用", align=2, sort=30)
 	public String getTotal_cost() {
 		return total_cost;
 	}
@@ -73,7 +74,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setTotal_cost(String total_cost) {
 		this.total_cost = total_cost;
 	}
-
+	@ExcelField(title = "诊断", align = 2, sort=25)
 	public String getSymptom() {
 		return symptom;
 	}
@@ -81,7 +82,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setSymptom(String symptom) {
 		this.symptom = symptom;
 	}
-
+	@ExcelField(title = "药费合计", align = 2, sort=35)
 	public String getDrugs() {
 		return drugs;
 	}
@@ -89,7 +90,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setDrugs(String drugs) {
 		this.drugs = drugs;
 	}
-
+	@ExcelField(title = "西药", align = 2, sort=40)
 	public String getWest_medicine() {
 		return west_medicine;
 	}
@@ -97,7 +98,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setWest_medicine(String west_medicine) {
 		this.west_medicine = west_medicine;
 	}
-
+	@ExcelField(title = "中成药", align = 2, sort=45)
 	public String getChinese_medicine() {
 		return chinese_medicine;
 	}
@@ -105,7 +106,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setChinese_medicine(String chinese_medicine) {
 		this.chinese_medicine = chinese_medicine;
 	}
-
+	@ExcelField(title = "住院天数", align = 2, sort=50)
 	public String getHospital_day() {
 		return hospital_day;
 	}
@@ -113,7 +114,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setHospital_day(String hospital_day) {
 		this.hospital_day = hospital_day;
 	}
-
+	@ExcelField(title = "入院日期", align = 2, sort=55)
 	public String getAdmission_day() {
 		return admission_day;
 	}
@@ -121,7 +122,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setAdmission_day(String admission_day) {
 		this.admission_day = admission_day;
 	}
-
+	@ExcelField(title = "结账日期", align = 2, sort=60)
 	public String getClosing_date() {
 		return closing_date;
 	}
@@ -129,7 +130,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setClosing_date(String closing_date) {
 		this.closing_date = closing_date;
 	}
-
+	@ExcelField(title = "社保", align = 2, sort=65)
 	public String getIs_shebao() {
 		return is_shebao;
 	}
@@ -137,7 +138,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setIs_shebao(String is_shebao) {
 		this.is_shebao = is_shebao;
 	}
-
+	@ExcelField(title = "少儿", align = 2, sort=70)
 	public String getIs_shaoer() {
 		return is_shaoer;
 	}
@@ -145,7 +146,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setIs_shaoer(String is_shaoer) {
 		this.is_shaoer = is_shaoer;
 	}
-
+	@ExcelField(title = "城镇", align = 2, sort=75)
 	public String getIs_chengzhen() {
 		return is_chengzhen;
 	}
@@ -153,7 +154,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setIs_chengzhen(String is_chengzhen) {
 		this.is_chengzhen = is_chengzhen;
 	}
-
+	@ExcelField(title = "个人支付", align = 2, sort=80)
 	public String getPersonal_pay() {
 		return personal_pay;
 	}
@@ -161,7 +162,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setPersonal_pay(String personal_pay) {
 		this.personal_pay = personal_pay;
 	}
-
+	@ExcelField(title = "城乡", align = 2, sort=85)
 	public String getIs_chengxiang() {
 		return is_chengxiang;
 	}
@@ -169,7 +170,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setIs_chengxiang(String is_chengxiang) {
 		this.is_chengxiang = is_chengxiang;
 	}
-
+	@ExcelField(title = "统筹支付", align = 2, sort=90)
 	public String getOverall_pay() {
 		return overall_pay;
 	}
@@ -177,7 +178,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setOverall_pay(String overall_pay) {
 		this.overall_pay = overall_pay;
 	}
-
+	@ExcelField(title = "辅助检查费合计", align = 2, sort=95)
 	public String getAssist_pay() {
 		return assist_pay;
 	}
@@ -185,7 +186,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setAssist_pay(String assist_pay) {
 		this.assist_pay = assist_pay;
 	}
-
+	@ExcelField(title = "反射费", align = 2, sort=100)
 	public String getBlas_pay() {
 		return blas_pay;
 	}
@@ -193,7 +194,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setBlas_pay(String blas_pay) {
 		this.blas_pay = blas_pay;
 	}
-
+	@ExcelField(title = "化验费", align = 2, sort=105)
 	public String getTest_pay() {
 		return test_pay;
 	}
@@ -201,7 +202,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setTest_pay(String test_pay) {
 		this.test_pay = test_pay;
 	}
-
+	@ExcelField(title = "检查费", align = 2, sort=110)
 	public String getCheck_pay() {
 		return check_pay;
 	}
@@ -209,7 +210,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setCheck_pay(String check_pay) {
 		this.check_pay = check_pay;
 	}
-
+	@ExcelField(title = "科室", align = 2, sort=115)
 	public String getDept() {
 		return dept;
 	}
@@ -217,7 +218,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setDept(String dept) {
 		this.dept = dept;
 	}
-
+	@ExcelField(title = "医生", align = 2, sort=120)
 	public String getDoctor_name() {
 		return doctor_name;
 	}
@@ -225,7 +226,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setDoctor_name(String doctor_name) {
 		this.doctor_name = doctor_name;
 	}
-
+	@ExcelField(title = "社保外伤", align = 2, sort=125)
 	public String getSb_waishang() {
 		return sb_waishang;
 	}
@@ -233,7 +234,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setSb_waishang(String sb_waishang) {
 		this.sb_waishang = sb_waishang;
 	}
-
+	@ExcelField(title = "城乡外伤", align = 2, sort=130)
 	public String getCx_waishang() {
 		return cx_waishang;
 	}
@@ -241,7 +242,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setCx_waishang(String cx_waishang) {
 		this.cx_waishang = cx_waishang;
 	}
-
+	@ExcelField(title = "高额", align = 2, sort=135)
 	public String getIs_gaoe() {
 		return is_gaoe;
 	}
@@ -249,7 +250,7 @@ public class PatientDetail extends IdEntity<PatientDetail> {
 	public void setIs_gaoe(String is_gaoe) {
 		this.is_gaoe = is_gaoe;
 	}
-
+	@ExcelField(title = "备注", align = 2, sort=140)
 	public String getRemark() {
 		return remark;
 	}

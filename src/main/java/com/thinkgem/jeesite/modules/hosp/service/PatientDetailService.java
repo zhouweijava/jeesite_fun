@@ -37,6 +37,7 @@ public class PatientDetailService extends BaseService {
 		if (StringUtils.isNotEmpty(patientDetail.getPatient_name())){
 			dc.add(Restrictions.like("patient_name", "%"+patientDetail.getPatient_name()+"%"));
 		}
+		dc.add(Restrictions.eq(PatientDetail.FIELD_DEL_FLAG, PatientDetail.DEL_FLAG_NORMAL));
 		dc.addOrder(Order.desc("id"));
 		return patientDetailDao.find(page, dc);
 	}
