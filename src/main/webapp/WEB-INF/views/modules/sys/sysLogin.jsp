@@ -99,7 +99,7 @@
         </div>
     </div>
     <footer class="white navbar-fixed-bottom">
-<!-- 修改系统相关信息 Copyright &copy; 2012-${fns:getConfig('copyrightYear')} <a href="${pageContext.request.contextPath}${fns:getFrontPath()}">${fns:getConfig('productName')}</a> - Powered By <a href="https://github.com/thinkgem/jeesite" target="_blank">JeeSite</a> ${fns:getConfig('version')}-->
+<!-- 修改系统相关信息 Copyright &copy; 2012-${fns:getConfig('copyrightYear')} <a href="${pageContext.request.contextPath}${fns:getFrontPath()}">${fns:getConfig('productName')}</a> - Powered By JeesiteFun ${fns:getConfig('version')}-->
 	Copyright &copy; 2012-${fns:getConfig('copyrightYear')} <a href="#">${fns:getConfig('productName')}</a> - Powered By <a href="#" target="_blank">2ppOrg</a> ${fns:getConfig('version')}
     </footer>
   </body>

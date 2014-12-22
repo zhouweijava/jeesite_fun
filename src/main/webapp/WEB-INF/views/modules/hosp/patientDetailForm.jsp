@@ -4,12 +4,9 @@
 <head>
 	<title>患者用户信息管理</title>
 	<meta name="decorator" content="default"/>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$("#name").focus();
-			$("#inputForm").validate();
-		});
-	</script>
+	<link href="${ctxStatic}/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="${ctxStatic}/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+
 </head>
 <body>
 	<ul class="nav nav-tabs">
@@ -102,7 +99,10 @@
 		<div class="control-group">
 			<label class="control-label" for="patient_name">入院日期:</label>
 			<div class="controls">
-				<form:input path="admission_day" htmlEscape="false" maxlength="200" class="required"/>
+				<div class="input-append date datetimepicker">
+					<form:input path="admission_day" htmlEscape="false" maxlength="200" class="required" readonly="true" />
+					<span class="add-on"><i class="icon-th"></i></span>
+				</div>
 			</div>
 		</div>
 
@@ -133,5 +133,20 @@
 			<input id="btnCancel" class="btn" type="button" value="返 回" onclick="history.go(-1)"/>
 		</div>
 	</form:form>
+
+
+	<script type="text/javascript" src="${ctxStatic}/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="${ctxStatic}/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#name").focus();
+			$("#inputForm").validate();
+		});
+		$('.datetimepicker').datetimepicker({
+			language:  'zh-CN',
+			format: 'yyyy-MM-dd',
+			pickTime:false
+		});
+	</script>
 </body>
 </html>
