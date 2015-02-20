@@ -41,12 +41,12 @@
 		<freemarker.version>2.3.19</freemarker.version>
 		
 		<!-- jdbc driver setting -->
-		<mysql.driver.version>5.1.13</mysql.driver.version>
+		<mysql.driver.version>5.1.16</mysql.driver.version>
 		<oracle.driver.version>10.2.0.1.0</oracle.driver.version>
 		<mssql.driver.version>1.2.4</mssql.driver.version>
 	    
 		<!-- other setting -->
-		<jdk.version>1.6</jdk.version>
+		<jdk.version>1.7</jdk.version>
 		<tomcat.version>2.1</tomcat.version>
 		<jetty.version>7.6.10.v20130312</jetty.version>
 		<webserver.port>8181</webserver.port>
@@ -177,17 +177,17 @@
         </dependency>
         -->
 		<!-- ERMaster end -->
-		<!-- 替换Eclipse-->
+		<!-- 替换Eclipse -->
 		<dependency>
 			<groupId>org.eclipse</groupId>
 			<artifactId>swt</artifactId>
 			<version>3.3.0</version>
 		</dependency>
-		<dependency>
-			<groupId>org.eclipse</groupId>
-			<artifactId>draw2d</artifactId>
-			<version>3.2.100-v20070529</version>
-		</dependency>
+        <dependency>
+            <groupId>org.eclipse</groupId>
+            <artifactId>draw2d</artifactId>
+            <version>3.2.100-v20070529</version>
+        </dependency>
 		<dependency>
 			<groupId>org.eclipse</groupId>
 			<artifactId>jface</artifactId>
@@ -858,7 +858,7 @@
 								<property name="dbunit.datatype" value="org.dbunit.ext.mssql.MsSqlDataTypeFactory" /> -->
 								
 								<property file="src/main/resources/jeesite.properties" />              				    
-                				<sql driver="${jdbc.driver}" url="${jdbc.url}" userid="${jdbc.username}" password="${jdbc.password}" 
+                				<sql driver="${jdbc.driver}" url="${jdbc.url}" userid="${jdbc.username}" password="${jdbc.password}"
                 				    onerror="continue" encoding="${project.build.sourceEncoding}">
 									<classpath refid="maven.test.classpath" />
 									<transaction src="db/sys/jeesite_${jdbc.type}.sql"/>
